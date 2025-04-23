@@ -45,40 +45,27 @@
       <div class="right-image">
         <img src="./images/dice.gif" alt=" GIF of a die witha flag coming out of it." width="250" />
       </div>
-      <br />
-      <div class="page-content">
-        Formula: 4 /3 π r³
-        <br />
-        <br />
-        <br />
-        Please enter the sphere's measurements in cm.
-      </div>
       <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          Radius:
-          <div class="mdl-textfield mdl-js-textfield">
-            <!-- input pattern attribute -->
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              name="radius-of-sphere" />
-            <!-- mdl-textfield__label -->
-            <label class="mdl-textfield__label" for="radius-of-sphere">Enter the radius of the sphere (cm)</label>
-            <!-- class "mdl-textfield__error" -->
-            <span class="mdl-textfield__error">Input is not a number.</span>
-          </div>
-          cm
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
-          </button>
-        </form>
-      </div>
+        <div id="user-info">
+          <?php
+          $radiusOfSphere = $_GET["radius-of-sphere"];
+
+          // process
+          $volumeOfSphere = (4 / 3) * M_PI * $radiusOfSphere ** 3;
+
+          // output
+          echo "If the radius is " . $radiusOfSphere . " cm";
+          echo "<br />";
+          echo "Then the volume of the sphere will be " . $volumeOfSphere . " cm³.";
+          ?>
+        </div>
+        <br />
+        <div class="page-content-answer">
+          <a href="./index.php">Return ...</a>
+        </div>
     </main>
   </div>
 </body>
+
 
 </html>
