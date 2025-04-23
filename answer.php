@@ -50,8 +50,9 @@
 
           <?php
           // input
-          $userNumber  = $_GET["user-number"];
           $randomNumber = rand(1, 6);
+          $userNumber  = $_GET["user-number"];
+
           if ($userNumber === $randomNumber) {
             echo "You guessed the right number!";
           }
