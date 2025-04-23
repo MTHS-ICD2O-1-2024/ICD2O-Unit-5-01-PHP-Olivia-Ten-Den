@@ -49,6 +49,8 @@
         <div id="user-info">
 
           <?php
+          // input
+          $userNumber  = $_GET["user-number"];
           $randomNumber = rand(1, 6);
           if ($userNumber === $randomNumber) {
             echo "You guessed the right number!";
