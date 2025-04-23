@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Volume of a sphere, PHP" />
+  <meta name="description" content="Random number guess, PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Olivia TD" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
     sizes="16x16"
     href="./favicon-16x16.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Volume of a sphere, PHP</title>
+  <title>Random number guess, PHP</title>
 </head>
 
 <body>
@@ -38,26 +38,29 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Volume of a sphere, PHP</span>
+        <span class="mdl-layout-title">Random number guess, PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/dice.gif" alt=" GIF of a die witha flag coming out of it." width="250" />
+        <img src="./images/dice.gif" alt=" GIF of a die with a flag coming out of it." width="250" />
       </div>
       <div class="page-content-php">
         <div id="user-info">
+
           <?php
-          $radiusOfSphere = $_GET["radius-of-sphere"];
+          $randomNumber = rand(1, 6);
+          if ($userNumber === $randomNumber) {
+            echo "You guessed the right number!";
+          }
 
-          // process
-          $volumeOfSphere = (4 / 3) * M_PI * $radiusOfSphere ** 3;
-
-          // output
-          echo "If the radius is " . $radiusOfSphere . " cm";
-          echo "<br />";
-          echo "Then the volume of the sphere will be " . $volumeOfSphere . " cm³.";
+          if ($userNumber !== $randomNumber) {
+            echo "You guessed the wrong number!";
+            echo "<br />";
+            echo "The right number is " . $randomNumber . ".";
+          }
           ?>
+
         </div>
         <br />
         <div class="page-content-answer">

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Volume of a sphere, PHP" />
+  <meta name="description" content="Random number guess, PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Olivia TD" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
     sizes="16x16"
     href="./favicon-16x16.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Volume of a sphere, PHP</title>
+  <title>Random number guess, PHP</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Volume of a sphere, PHP</span>
+        <span class="mdl-layout-title">Random number guess, PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -47,33 +47,26 @@
       </div>
       <br />
       <div class="page-content">
-        Formula: 4 /3 π r³
-        <br />
-        <br />
-        <br />
-        Please enter the sphere's measurements in cm.
-      </div>
+        Pick a number between 1 and 6. </div>
       <div class="page-content-php">
         <form action="answer.php" method="GET">
-          Radius:
           <div class="mdl-textfield mdl-js-textfield">
             <!-- input pattern attribute -->
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              name="radius-of-sphere" />
+              id="user-number" />
             <!-- mdl-textfield__label -->
-            <label class="mdl-textfield__label" for="radius-of-sphere">Enter the radius of the sphere (cm)</label>
+            <label class="mdl-textfield__label" for="user-number">Enter number here...</label>
             <!-- class "mdl-textfield__error" -->
             <span class="mdl-textfield__error">Input is not a number.</span>
           </div>
-          cm
           <br />
           <!-- Accent-colored raised button with ripple -->
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
+            type="check-button">
+            Check!
           </button>
         </form>
       </div>
