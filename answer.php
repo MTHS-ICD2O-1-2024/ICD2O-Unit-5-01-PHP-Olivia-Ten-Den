@@ -50,17 +50,20 @@
 
           <?php
           // input
-          $randomNumber = rand(1, 6);
-          $userNumber  = $_GET["user-number"];
+          $randomNumber = random_int(1, 6);
+          $userNumber  = intval($_GET["user-number"]);
+
+          echo "Your number was " . $userNumber . ".";
+          echo "<br />";
+          echo "The right number is " . $randomNumber . ".";
+          echo "<br />";
 
           if ($userNumber === $randomNumber) {
-            echo "You guessed the right number!";
+            echo "You guessed the RIGHT number!";
           }
 
           if ($userNumber !== $randomNumber) {
-            echo "You guessed the wrong number!";
-            echo "<br />";
-            echo "The right number is " . $randomNumber . ".";
+            echo "You guessed the wrong number.";
           }
           ?>
 

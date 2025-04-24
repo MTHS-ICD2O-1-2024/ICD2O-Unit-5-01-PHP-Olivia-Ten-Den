@@ -47,29 +47,30 @@
       </div>
       <br />
       <div class="page-content">
-        Pick a number between 1 and 6. </div>
-      <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          <div class="mdl-textfield mdl-js-textfield">
-            <!-- input pattern attribute -->
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="user-number" />
-            <!-- mdl-textfield__label -->
-            <label class="mdl-textfield__label" for="user-number">Enter number here...</label>
-            <!-- class "mdl-textfield__error" -->
-            <span class="mdl-textfield__error">Input is not a number.</span>
-          </div>
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="check-button">
-            Check!
-          </button>
-        </form>
-      </div>
+        <div>Pick a number between 1 and 6. </div>
+        <div class="page-content-php">
+          <form action="answer.php" method="GET">
+            <div class="mdl-textfield mdl-js-textfield">
+              <!-- input pattern attribute -->
+              <input
+                class="mdl-textfield__input"
+                type="number"
+                min="1" max="6"
+                id="user-number"
+                name="user-number" />
+              <!-- mdl-textfield__label -->
+              <label class="mdl-textfield__label" for="user-number">Enter number here...</label>
+              <!-- class "mdl-textfield__error" -->
+              <span class="mdl-textfield__error">Input is not a number.</span>
+            </div>
+            <br />
+            <!-- Accent-colored raised button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+              type="check-button">
+              Check!
+            </button>
+          </form>
+        </div>
     </main>
   </div>
 </body>
