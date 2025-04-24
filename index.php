@@ -61,7 +61,7 @@
               <!-- mdl-textfield__label -->
               <label class="mdl-textfield__label" for="user-number">Enter number here...</label>
               <!-- class "mdl-textfield__error" -->
-              <span class="mdl-textfield__error">Input is not a number.</span>
+              <span class="mdl-textfield__error">Input is not a valid number.</span>
             </div>
             <br />
             <!-- Accent-colored raised button with ripple -->
